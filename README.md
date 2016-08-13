@@ -58,6 +58,9 @@ And as you are guessing, findOneByField will return only one document.
 # sortAscendingBy(field)
 # sortDescendingBy(field)
 # sortWith(object)
+# fetchRelated(name)
+Supercollection also pays attention to the `collectionId` field convention for relationships on the schema.
+So if you follow the convention `collection name` + `id` for naming those fields your are covered.
 
 ### Why?
 Readability is everything for a good code base, and that is something that lacks sometimes
