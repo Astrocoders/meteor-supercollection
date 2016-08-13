@@ -62,6 +62,11 @@ And as you are guessing, findOneByField will return only one document.
 Supercollection also pays attention to the `collectionId` field convention for relationships on the schema.
 So if you follow the convention `collection name` + `id` for naming those fields your are covered.
 
+```js
+Items.findOneByName('foo').fetchRelated('client') => {}
+Items.findByName('foo').fetchRelated('client') => [{}, ...]
+```
+
 ### Why?
 Readability is everything for a good code base, and that is something that lacks sometimes
 in the collection queries we do in Meteor. Also it makes easier to enforces good practices like
